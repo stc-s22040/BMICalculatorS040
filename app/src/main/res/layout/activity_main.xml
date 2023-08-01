@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btclear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/bt_clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btcalculation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/bt_calculation"
+        app:layout_constraintBottom_toTopOf="@+id/btclear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvage"
+        android:layout_width="63dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="55dp"
+        android:text="@string/tv_age"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etage"
+        app:layout_constraintEnd_toStartOf="@+id/etage"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:gravity="end" />
+
+    <EditText
+        android:id="@+id/etage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/etheight"
+        app:layout_constraintEnd_toStartOf="@+id/tvage2"
+        app:layout_constraintStart_toEndOf="@+id/tvage"
+        tools:gravity="end" />
+
+    <TextView
+        android:id="@+id/tvheight"
+        android:layout_width="63dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="55dp"
+        android:text="@string/tv_height"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etheight"
+        app:layout_constraintEnd_toStartOf="@+id/etheight"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:gravity="end" />
+
+    <EditText
+        android:id="@+id/etheight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/etweight"
+        app:layout_constraintEnd_toStartOf="@+id/tvheight2"
+        app:layout_constraintStart_toEndOf="@+id/tvheight"
+        tools:gravity="end" />
+
+    <TextView
+        android:id="@+id/tvweight"
+        android:layout_width="61dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="55dp"
+        android:text="@string/tv_weight"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etweight"
+        app:layout_constraintEnd_toStartOf="@+id/etweight"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:gravity="end" />
+
+    <EditText
+        android:id="@+id/etweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btcalculation"
+        app:layout_constraintEnd_toStartOf="@+id/tvweight2"
+        app:layout_constraintStart_toEndOf="@+id/tvweight"
+        tools:gravity="end" />
+
+    <TextView
+        android:id="@+id/tvage2"
+        android:layout_width="45dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="60dp"
+        android:text="歳"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etage" />
+
+    <TextView
+        android:id="@+id/tvheight2"
+        android:layout_width="39dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="60dp"
+        android:text="cm"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etheight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etheight" />
+
+    <TextView
+        android:id="@+id/tvweight2"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="60dp"
+        android:text="kg"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etweight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etweight" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <TextView
+        android:id="@+id/tvOutput4"
+        android:layout_width="155dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOutput3"
+        tools:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvOutput5"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvOutput4"
+        app:layout_constraintStart_toEndOf="@+id/tvOutput4" />
+
+    <TextView
+        android:id="@+id/tvOutput1"
+        android:layout_width="171dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvOutput2"
+        android:layout_width="153dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOutput1"
+        tools:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvOutput3"
+        android:layout_width="169dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOutput2"
+        tools:gravity="center_horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
